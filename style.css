@@ -1,385 +1,343 @@
-/* =========================================
-   Mobile Enhancement
-   style.css
-========================================= */
+<!DOCTYPE html>
+<html lang="en">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mobile Enhancement</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- LOGO -->
+
+    <div class="logo">
+        <img src="logo.png" alt="Mobile Enhancement Logo">
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <h2>Our Services</h2>
+
+    <p>
+        Sales of new &amp; used mobile phones.<br>
+        Wide range of mobile phone accessories.<br>
+        Mobile phone repair &amp; servicing.<br>
+        Attractive Trade-In prices.
+    </p>
+
+
+    <!-- HEAD OFFICE -->
+
+    <div class="section">
+
+        <h3>Head Office</h3>
+
+        <p>
+            11 Woodlands Close<br>
+            #06-12 Woodlands 11<br>
+            Singapore 737853<br><br>
+
+            Tel: 8757 8777
+        </p>
+
+        <a href="https://maps.google.com/?q=11+Woodlands+Close+Singapore+737853"
+           target="_blank"
+           class="map-btn">
+            📍 View on Google Maps
+        </a>
+
+    </div>
+
+
+    <!-- NORTH -->
+
+    <div class="section">
+
+        <h3>NORTH</h3>
+
+
+        <!-- ADMIRALTY -->
+
+        <div class="admiralty-outlet">
+
+            <div class="outlet-photo">
+
+                <img src="admiralty.jpg"
+                     alt="Mobile Enhancement Admiralty Branch">
+
+            </div>
+
+
+            <div class="outlet-details">
+
+                <strong>Blk 678A Woodlands Ave 6</strong><br><br>
+
+                #01-02 Admiralty Place<br>
+                Singapore 731678<br><br>
+
+                Tel: 6612 1546
+
+                <a href="https://maps.google.com/?q=678A+Woodlands+Ave+6+Singapore+731678"
+                   target="_blank"
+                   class="map-btn">
+                    📍 View on Google Maps
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HOUGANG -->
+
+        <div class="north-outlet">
+
+            <strong>Blk 205 Hougang St 21</strong><br><br>
+
+            #01-129<br>
+            Singapore 530205<br><br>
+
+            Tel: 6988 2945
+
+            <a href="https://maps.google.com/?q=205+Hougang+Street+21+Singapore+530205"
+               target="_blank"
+               class="map-btn">
+                📍 View on Google Maps
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- EAST -->
+
+    <div class="section">
+
+        <h3>EAST</h3>
+
+        <p>
+            <strong>Blk 201D Tampines St 21</strong><br>
+            #01-1143<br>
+            Singapore 524201<br><br>
+
+            Tel: 6785 5977
+        </p>
+
+        <a href="https://maps.google.com/?q=201D+Tampines+Street+21+Singapore+524201"
+           target="_blank"
+           class="map-btn">
+            📍 View on Google Maps
+        </a>
+
+    </div>
+
+
+    <!-- WEST -->
+
+    <div class="section">
+
+        <h3>WEST</h3>
+
+        <p>
+            <strong>Blk 533 Choa Chu Kang St 51</strong><br>
+            Limbang Shopping Centre<br>
+            #01-08<br>
+            Singapore 680533<br><br>
+
+            Tel: 6610 7839
+        </p>
+
+        <a href="https://maps.google.com/?q=533+Choa+Chu+Kang+Street+51+Singapore+680533"
+           target="_blank"
+           class="map-btn">
+            📍 View on Google Maps
+        </a>
+
+
+        <br><br>
+
+
+        <p>
+            <strong>Blk 127 Plantation Crescent</strong><br>
+            #B1-03 Plantation Plaza<br>
+            Singapore 690127<br><br>
+
+            Tel: 6895 376
+        </p>
+
+        <a href="https://maps.google.com/?q=127+Plantation+Crescent+Singapore+690127"
+           target="_blank"
+           class="map-btn">
+            📍 View on Google Maps
+        </a>
+
+
+        <br><br>
+
+
+        <p>
+            <strong>Blk 259 Bukit Panjang Ring Road</strong><br>
+            #01-26<br>
+            Singapore 671259<br><br>
+
+            Tel: 6895 376
+        </p>
+
+        <a href="https://maps.google.com/?q=259+Bukit+Panjang+Ring+Road+Singapore+671259"
+           target="_blank"
+           class="map-btn">
+            📍 View on Google Maps
+        </a>
+
+    </div>
+
+
+    <!-- CALL HEAD OFFICE -->
+
+    <a href="tel:+6587578777" class="call-btn">
+        📞 Call Head Office
+    </a>
+
+
+    <!-- SAVE CONTACT -->
+
+    <a href="contact.vcf" class="save-contact">
+        📥 Save Contact
+    </a>
+
+
+    <!-- SAVE TO HOME SCREEN -->
+
+    <a href="#"
+       class="save-contact"
+       onclick="openModal(); return false;">
+        ⭐ Save to Home Screen
+    </a>
+
+
+    <!-- TOP UP -->
+
+    <div class="topup">
+
+        <h2>📱 Scan to Top Up</h2>
+
+        <a href="topup-qr.png" target="_blank">
+
+            <img src="topup-qr.png"
+                 alt="Top Up QR Code">
+
+        </a>
+
+        <p>
+            Scan this QR code to top up your mobile service.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- SAVE TO HOME SCREEN MODAL -->
+
+<div id="homeModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close-btn"
+                onclick="closeModal()">
+            ×
+        </button>
+
+        <h2>⭐ Save to Home Screen</h2>
+
+        <p>
+            Save Mobile Enhancement to your phone for quick access.
+        </p>
+
+
+        <div class="phone-steps">
+
+            <h3>📱 iPhone</h3>
+
+            <ol>
+                <li>Tap the <strong>Share</strong> button.</li>
+
+                <li>Select <strong>Add to Home Screen</strong>.</li>
+
+                <li>Tap <strong>Add</strong>.</li>
+
+                <li>The Mobile Enhancement icon will appear on your Home Screen.</li>
+            </ol>
+
+        </div>
+
+
+        <div class="phone-steps">
+
+            <h3>🤖 Android</h3>
+
+            <ol>
+                <li>Tap the <strong>⋮ menu</strong> in Chrome.</li>
+
+                <li>Select <strong>Add to Home screen</strong>.</li>
+
+                <li>Tap <strong>Add</strong>.</li>
+            </ol>
+
+        </div>
+
+
+        <button class="close-modal-btn"
+                onclick="closeModal()">
+            Done
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- MODAL JAVASCRIPT -->
+
+<script>
+
+function openModal() {
+
+    document.getElementById("homeModal").style.display = "flex";
+
 }
 
-body{
-    background:#f3f3f7;
-    font-family:Arial, Helvetica, sans-serif;
-    color:#333;
-    padding:20px;
-}
 
-/* Main Card */
+function closeModal() {
 
-.card{
-    max-width:700px;
-    margin:auto;
-    background:#fff;
-    border-radius:18px;
-    padding:30px;
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
-}
+    document.getElementById("homeModal").style.display = "none";
 
-/* Logo */
-
-/* Logo */
-
-.logo{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.logo img{
-    display:block;
-    width:60%;
-    max-width:360px;
-    min-width:220px;
-    height:auto;
-    margin:0 auto;
-}
-
-/* Headings */
-
-h2{
-    color:#5B2DA8;
-    text-align:center;
-    margin-bottom:20px;
-    font-size:32px;
-}
-
-h3{
-    color:#5B2DA8;
-    font-size:30px;
-    margin-bottom:12px;
-}
-
-/* Paragraph */
-
-p{
-    font-size:18px;
-    line-height:1.6;
-}
-
-/* Sections */
-
-.section{
-    border-top:1px solid #dddddd;
-    padding-top:18px;
-    margin-top:30px;
-}
-
-/* Call Button */
-
-.call-btn{
-    display:block;
-    width:100%;
-    text-align:center;
-    background:#5B2DA8;
-    color:#fff;
-    text-decoration:none;
-    padding:18px;
-    border-radius:15px;
-    margin-top:25px;
-    font-size:22px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.call-btn:hover{
-    background:#45208A;
-}
-.map-btn{
-    display:block;
-    margin-bottom:12px;
-}
-.north-outlet{
-    margin-bottom:50px;
 }
 
 
+window.onclick = function(event) {
 
+    const modal = document.getElementById("homeModal");
 
-/* QR Section */
+    if (event.target === modal) {
 
-.topup{
-    text-align:center;
-    margin-top:35px;
-    background:#fafafa;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
+        closeModal();
 
-.topup h2{
-    margin-top:0;
-    margin-bottom:20px;
-    color:#5B2DA8;
-}
-
-.topup img{
-    width:220px;
-    max-width:100%;
-    display:block;
-    margin:20px auto;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.18);
-}
-
-.topup p{
-    color:#666;
-    font-size:16px;
-}
-
-/* Mobile */
-
-@media (max-width:1000px){
-
-    body{
-        padding:12px;
     }
 
-    .card{
-        padding:20px;
-    }
-
-    .logo img{
-        max-width:260px;
-    }
-
-    h2{
-        font-size:28px;
-    }
-
-    h3{
-        font-size:24px;
-    }
-
-    p{
-        font-size:17px;
-    }
-
-    .call-btn{
-        font-size:20px;
-        padding:16px;
-    }
-
-    .topup img{
-        width:180px;
-    }
-
-}
-.save-contact{
-
-    display:block;
-    width:100%;
-    background:#5B2DA8;
-    color:#fff;
-    text-decoration:none;
-    text-align:center;
-
-    font-size:22px;
-    font-weight:bold;
-
-    padding:18px;
-
-    border-radius:14px;
-
-    margin:25px 0;
-
-    transition:.3s;
-
 }
 
-.save-contact:hover{
+</script>
 
-    background:#47218f;
 
-}
+</body>
 
-
-/* =========================================
-   Save to Home Screen Modal
-========================================= */
-
-.modal{
-
-    display:none;
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.55);
-
-    justify-content:center;
-    align-items:center;
-
-    z-index:9999;
-
-}
-
-.modal-box{
-
-    width:90%;
-    max-width:450px;
-
-    background:#fff;
-
-    border-radius:20px;
-
-    padding:30px;
-
-    position:relative;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
-
-    animation:popup .25s ease;
-
-}
-
-@keyframes popup{
-
-    from{
-
-        transform:scale(.9);
-        opacity:0;
-
-    }
-
-    to{
-
-        transform:scale(1);
-        opacity:1;
-
-    }
-
-}
-
-.close{
-
-    position:absolute;
-
-    top:12px;
-    right:18px;
-
-    font-size:34px;
-
-    cursor:pointer;
-
-    color:#5B2DA8;
-
-    font-weight:bold;
-
-}
-
-.modal-box h2{
-
-    text-align:center;
-
-    color:#5B2DA8;
-
-    margin-bottom:12px;
-
-}
-
-.modal-intro{
-
-    text-align:center;
-
-    color:#666;
-
-    margin-bottom:20px;
-
-}
-
-.phone-box{
-
-    background:#f7f4ff;
-
-    border-radius:12px;
-
-    padding:15px;
-
-    margin-bottom:18px;
-
-}
-
-.phone-box h3{
-
-    font-size:22px;
-
-    margin-bottom:10px;
-
-    color:#5B2DA8;
-
-}
-
-.phone-box ol{
-
-    padding-left:22px;
-
-    line-height:1.8;
-
-    font-size:17px;
-
-}
-
-.done-btn{
-
-    width:100%;
-
-    padding:16px;
-
-    background:#5B2DA8;
-
-    color:#fff;
-
-    border:none;
-
-    border-radius:14px;
-
-    font-size:20px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.done-btn:hover{
-
-    background:#47218f;
-
-}
-/* Head Office Image */
-
-.head-office{
-    display:flex;
-    gap:20px;
-    align-items:flex-start;
-}
-
-.head-office-img{
-    width:100px;
-    height:100px;
-    object-fit:cover;
-    border-radius:12px;
-    flex-shrink:0;
-}
-
-.head-office-info{
-    flex:1;
-}
-
-.head-office-info h3{
-    margin-top:0;
-}
+</html>
